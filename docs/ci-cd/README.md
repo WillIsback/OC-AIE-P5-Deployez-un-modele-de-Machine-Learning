@@ -49,7 +49,7 @@ graph TD
 
 > Tous les workflows CI sont déclenchés sur `pull_request` vers `main` (et `workflow_dispatch`), avec une concurrence par ref et `cancel-in-progress: true`.
 >
-> **Checks requis** : le ruleset « Protection de main » exige `ci-code-quality`, `ci-test (3.12)`, `ci-test (3.13)`, `ci-traceability`, `ci-model-performance`, `SCA (Dependency Review)`, `SAST (CodeQL)`, `Secret Leak (Gitleaks)`, `IaC / Dockerfile Scan (Trivy config)` (émis par GitHub Actions) et `SonarCloud Code Analysis` (application SonarQube Cloud). Chaque contexte est lié à l'application qui l'émet (`integration_id`), ce qui empêche un autre acteur de le signaler. Le ruleset impose aussi le merge **squash** uniquement et une règle `code_scanning` CodeQL (alertes `errors` et sécurité `high_or_higher`). Renommer un job ou une entrée de matrice impose de mettre à jour le ruleset, sinon les PR restent bloquées en attente du check.
+> **Checks requis** : le ruleset « Protection de main » exige `ci-code-quality`, `ci-test (3.12)`, `ci-test (3.13)`, `ci-traceability`, `ci-model-performance`, `SCA (Dependency Review)`, `SAST (CodeQL)`, `Secret Leak (Gitleaks)`, `IaC / Dockerfile Scan (Trivy config)`, tous émis par GitHub Actions. Chaque contexte est lié à l'application qui l'émet (`integration_id`), ce qui empêche un autre acteur de le signaler. Le ruleset impose aussi le merge **squash** uniquement et une règle `code_scanning` CodeQL (alertes `errors` et sécurité `high_or_higher`). Renommer un job ou une entrée de matrice impose de mettre à jour le ruleset, sinon les PR restent bloquées en attente du check.
 
 **Précisions sur l'existant** :
 
