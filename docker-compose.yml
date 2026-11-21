@@ -17,7 +17,7 @@ services:
   # docker-compose.override.yml (chargé automatiquement) la remplace par un build
   # local et monte ./models. P5_IMAGE épingle une version : `…:v1.3.2`.
   api:
-    image: ${P5_IMAGE:-ghcr.io/willisback/oc-p5_deployez_un_modele_de_machine_learning:latest}
+    image: ${P5_IMAGE:-ghcr.io/willisback/oc-aie-p5-deployez-un-modele-de-machine-learning:latest}
     environment:
       SECRET_KEY: ${SECRET_KEY:?définir SECRET_KEY dans .env}
       DATABASE_URL: postgresql+psycopg://p5_api:${P5_API_PASSWORD:?définir P5_API_PASSWORD dans .env}@db:5432/p5
@@ -32,7 +32,7 @@ services:
   # évaluation, entraînement. Seul ce service reçoit les identifiants
   # admin/propriétaire (jamais le service `api`).
   tools:
-    image: ${P5_IMAGE:-ghcr.io/willisback/oc-p5_deployez_un_modele_de_machine_learning:latest}
+    image: ${P5_IMAGE:-ghcr.io/willisback/oc-aie-p5-deployez-un-modele-de-machine-learning:latest}
     profiles: ["tools"]
     # Uid/gid de l'hôte pour écrire dans ./data, ./models et ./mlruns (montages liés).
     # Si `id -u` / `id -g` ne valent pas 1000, définir UID et GID dans .env.
@@ -96,7 +96,7 @@ services:
   # celle-ci (aucun accès à la base ni au modèle, ni SECRET_KEY) ; chaque action
   # passe par le JWT et la traçabilité, donc visible dans Grafana.
   ui:
-    image: ${P5_IMAGE:-ghcr.io/willisback/oc-p5_deployez_un_modele_de_machine_learning:latest}
+    image: ${P5_IMAGE:-ghcr.io/willisback/oc-aie-p5-deployez-un-modele-de-machine-learning:latest}
     command: ["python", "-m", "app.ui"]
     environment:
       P5_API_URL: http://api:8080

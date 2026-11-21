@@ -1,8 +1,8 @@
 # P5 — Déployez un modèle de Machine Learning
 
-[![ci-install](https://github.com/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning/actions/workflows/ci-install.yml/badge.svg?branch=main)](https://github.com/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning/actions/workflows/ci-install.yml)
-[![Release](https://img.shields.io/github/v/release/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning?sort=semver)](https://github.com/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning/releases)
-[![Licence MIT](https://img.shields.io/github/license/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning)](LICENSE)
+[![ci-install](https://github.com/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning/actions/workflows/ci-install.yml/badge.svg?branch=main)](https://github.com/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning/actions/workflows/ci-install.yml)
+[![Release](https://img.shields.io/github/v/release/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning?sort=semver)](https://github.com/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning/releases)
+[![Licence MIT](https://img.shields.io/github/license/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning)](LICENSE)
 [![Démo en ligne](https://img.shields.io/badge/D%C3%A9mo%20en%20ligne-%E2%9A%A1%20Space-blue)](https://willisback-seattle-energy-demo.hf.space)
 [![Modèle](https://img.shields.io/badge/Mod%C3%A8le-%F0%9F%A7%AD%20Hugging%20Face-yellow?logo=huggingface)](https://huggingface.co/WillisBack/seattle-energy-catboost)
 
@@ -58,17 +58,17 @@ Les deux parcours installent la base PostgreSQL, ingèrent les jeux 2016 (entra�
 Aucun clone : l'image publiée sur GHCR est tirée, et le dossier `p5-energy/` reçoit `docker-compose.yml` et un `.env` aux secrets **générés aléatoirement**.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning/main/scripts/quickstart.sh | bash
+curl -fsSL https://raw.githubusercontent.com/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning/main/scripts/quickstart.sh | bash
 ```
 
-Épingler une version : `… | P5_IMAGE=ghcr.io/willisback/oc-p5_deployez_un_modele_de_machine_learning:v1.3.2 bash`. Image `linux/amd64` (émulée sur Apple Silicon). Arrêt : `cd p5-energy && docker compose down` (ajouter `-v` pour effacer la base).
+Épingler une version : `… | P5_IMAGE=ghcr.io/willisback/oc-aie-p5-deployez-un-modele-de-machine-learning:v1.3.2 bash`. Image `linux/amd64` (émulée sur Apple Silicon). Arrêt : `cd p5-energy && docker compose down` (ajouter `-v` pour effacer la base).
 
 ### 🧑‍💻 Développeurs — code source
 
 Prérequis supplémentaires : Git, et [uv](https://docs.astral.sh/uv/getting-started/installation/) pour le développement local (voir plus bas). L'image est construite depuis les sources (`docker-compose.override.yml`, qui monte aussi `./models`) et `.env` est copié depuis `.example.env` (secrets de démonstration : à changer hors démo).
 
 ```bash
-git clone https://github.com/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning.git && cd OC-P5_Deployez_un_modele_de_Machine_Learning && scripts/quickstart.sh --source
+git clone https://github.com/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning.git && cd OC-AIE-P5-Deployez-un-modele-de-Machine-Learning && scripts/quickstart.sh --source
 ```
 
 Le détail des étapes (une commande `docker compose` chacune) est dans [`scripts/quickstart.sh`](scripts/quickstart.sh) et dans [`docs/db/README.md`](docs/db/README.md#4-mise-en-route).
