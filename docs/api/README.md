@@ -1,6 +1,6 @@
 # ⚡ API de prédiction (CatBoost — Seattle)
 
-L'API prédit la consommation d'énergie (`SiteEnergyUse(kBtu)`) et les émissions de GES (`TotalGHGEmissions`) d'un bâtiment non résidentiel de Seattle avec deux `CatBoostRegressor`, selon le pipeline du projet de référence [OC-Ai-Engineer-P3](https://github.com/WillIsback/OC-Ai-Engineer-P3) (cible transformée `log1p`, prédiction ramenée en unités réelles avec `expm1`).
+L'API prédit la consommation d'énergie (`SiteEnergyUse(kBtu)`) et les émissions de GES (`TotalGHGEmissions`) d'un bâtiment non résidentiel de Seattle avec deux `CatBoostRegressor`, selon le pipeline du projet de référence [OC-AIE-P3-Anticipez-les-besoins-en-consommation-de-batiments-de-Seattle](https://github.com/WillIsback/OC-AIE-P3-Anticipez-les-besoins-en-consommation-de-batiments-de-Seattle) (cible transformée `log1p`, prédiction ramenée en unités réelles avec `expm1`).
 
 La documentation interactive (Swagger / OpenAPI) est servie sur http://localhost:8080/docs. Toutes les routes ci-dessous exigent un jeton : voir [Authentification](authentication.md).
 

@@ -120,7 +120,7 @@ uv lock --check
 
 ## 🐳 Docker
 
-Le `Dockerfile` dérive de l'image de base des dépendances (`ARG BASE_IMAGE`, par défaut `ghcr.io/willisback/oc-p5_deployez_un_modele_de_machine_learning:base`, publiée par le workflow `base-image`). Sans accès à cette image, construire la base localement et la passer en argument :
+Le `Dockerfile` dérive de l'image de base des dépendances (`ARG BASE_IMAGE`, par défaut `ghcr.io/willisback/oc-aie-p5-deployez-un-modele-de-machine-learning:base`, publiée par le workflow `base-image`). Sans accès à cette image, construire la base localement et la passer en argument :
 
 ```bash
 # Build avec l'image de base GHCR (défaut)

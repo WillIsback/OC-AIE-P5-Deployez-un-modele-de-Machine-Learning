@@ -2,7 +2,7 @@
 # Installe, lance et vérifie l'API de prédiction en une commande.
 #
 # Utilisateurs (image Docker publiée sur GHCR, aucun clone) :
-#   curl -fsSL https://raw.githubusercontent.com/WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning/main/scripts/quickstart.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning/main/scripts/quickstart.sh | bash
 #   → crée ./p5-energy (docker-compose.yml + .env aux secrets aléatoires)
 #
 # Développeurs (depuis un clone, image construite depuis les sources) :
@@ -29,7 +29,7 @@ main() {
   set -euo pipefail
   export LC_NUMERIC=C # printf %f : point décimal quelle que soit la locale
 
-  local repo="WillIsback/OC-P5_Deployez_un_modele_de_Machine_Learning"
+  local repo="WillIsback/OC-AIE-P5-Deployez-un-modele-de-Machine-Learning"
   local raw="${P5_RAW_BASE:-https://raw.githubusercontent.com/$repo/${P5_REF:-main}}"
   local api="http://localhost:${API_PORT:-8080}"
   local grafana="http://localhost:${GRAFANA_PORT:-3000}"
