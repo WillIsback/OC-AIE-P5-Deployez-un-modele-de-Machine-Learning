@@ -40,7 +40,7 @@ L'objectif est de **rendre le modèle utilisable en production** tout en respect
 | **Interface** | [Gradio](https://www.gradio.app/) 6 (client HTTP de l'API, thème clair) |
 | **Monitoring** | [Grafana](https://grafana.com/oss/grafana/) 12 (tableaux de bord provisionnés, datasource PostgreSQL) |
 | **Conteneurs** | Docker, Docker Compose, image publiée sur GHCR (modèle embarqué) |
-| **Qualité & tests** | [uv](https://github.com/astral-sh/uv), ruff, pytest + pytest-cov, diff-cover, SonarCloud |
+| **Qualité & tests** | [uv](https://github.com/astral-sh/uv), ruff, pytest + pytest-cov, diff-cover |
 | **CI/CD** | GitHub Actions, release semver automatique, revue de code IA |
 | **Sécurité** | CodeQL, Trivy, Gitleaks, Dependency Review, hadolint, actionlint, zizmor |
 | **Documentation** | Markdown, diagrammes Mermaid, OpenAPI (Swagger / ReDoc) |
